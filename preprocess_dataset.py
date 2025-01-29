@@ -10,7 +10,7 @@ def is_valid_image(path):
     except (IOError, SyntaxError):
         return False
 
-def load_dataset(path, exclude_folder="ant"):
+def load_dataset(path):
     data = {"path": [], "label": []}
     for root, _, files in os.walk(path):
         if exclude_folder in root:
